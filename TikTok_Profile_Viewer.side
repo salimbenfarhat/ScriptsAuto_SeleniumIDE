@@ -1,0 +1,91 @@
+{
+  "id": "cb6013bb-110a-4a33-9711-248f33471a6c",
+  "version": "2.0",
+  "name": "tiktok",
+  "url": "https://www.tiktok.com/fr",
+  "tests": [{
+    "id": "5f514a6e-7779-4cc7-949d-a0a1ac59ae55",
+    "name": "TC_001",
+    "commands": [{
+      "id": "5c420a46-33da-4231-b015-0a2502901f7f",
+      "comment": "Ouverture de l'url TikTok sur le Navigateur",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "105c2d07-b99f-4c86-bfa4-c317cfc3a5d9",
+      "comment": "Définition d'une dimension pour le navigateur",
+      "command": "setWindowSize",
+      "target": "1616x876",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0c8213e-0949-4634-a9d3-6193fc38058f",
+      "comment": "Initialisation du compteur",
+      "command": "executeScript",
+      "target": "return window.counter = 0;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fea17c4-513e-4fad-8352-be4818673f6e",
+      "comment": "Vérification de la condition de la boucle",
+      "command": "executeScript",
+      "target": "return window.counter < 100;",
+      "targets": [],
+      "value": "condition"
+    }, {
+      "id": "3166d9b7-b477-42f5-8296-5bf3d4b98200",
+      "comment": "Début de la boucle",
+      "command": "while",
+      "target": "${condition}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "964a57f2-01f6-4943-b6c3-31827a3c3576",
+      "comment": "Clique sur l'élément cible",
+      "command": "click",
+      "target": "css=.tiktok-18a873i-DivItemContainer:nth-child(1) .tiktok-1miyo77-H3AuthorTitle",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "215a4bbf-59cd-4a9d-9448-4502574f4d4f",
+      "comment": "Simule un clic sur le bouton de retour du navigateur",
+      "command": "executeScript",
+      "target": "history.back()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "028ba495-5170-480e-94e7-807a24c8edbf",
+      "comment": "Incrémentation du compteur",
+      "command": "executeScript",
+      "target": "return window.counter++;",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c25cae6-85c3-4d41-b041-675922ab66fa",
+      "comment": "Fin de la boucle",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70090525-4a54-4c60-8547-7645dca745ca",
+      "comment": "Ferme la fenêtre active",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "968745f4-d120-46ae-a444-1598b864e8d4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5f514a6e-7779-4cc7-949d-a0a1ac59ae55"]
+  }],
+  "urls": ["https://www.tiktok.com/", "https://www.tiktok.com/fr"],
+  "plugins": []
+}
